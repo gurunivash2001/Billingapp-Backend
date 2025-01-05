@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Product = require('../models/product');
 
-router.post('/', async (req, res) => {
+router.post('/create-products', async (req, res) => {
     try {
       const { name, price, quantity } = req.body;
       const product = new Product({ name, price, quantity });
@@ -15,7 +15,7 @@ router.post('/', async (req, res) => {
   
 
  
-router.get('/', async (req, res) => {
+router.get('/get-products', async (req, res) => {
   try {
     const products = await Product.find();
     res.json(products);

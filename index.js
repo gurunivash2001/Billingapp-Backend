@@ -26,4 +26,4 @@ const billingRoutes = require('./routes/billing');
 app.use('/products', productRoutes);
 app.use('/billing', billingRoutes);
 
-app.listen(port, () => console.log(`Server running on http://192.168.0.104:${port}`));
+app.listen(port, () => console.log(`Server running on http://localhost:${port}`));

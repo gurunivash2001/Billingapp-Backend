@@ -23,7 +23,7 @@ mongoose.connect(url, {
 const productRoutes = require('./routes/products');
 const billingRoutes = require('./routes/billing');
 
-app.use('/products', productRoutes);
-app.use('/billing', billingRoutes);
+app.use('/', productRoutes);
+app.use('/', billingRoutes);
 
 app.listen(port, () => console.log(`Server running on port ${port}`));

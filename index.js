@@ -7,7 +7,7 @@ const dotenv = require('dotenv')
 const app = express();
  dotenv.config()
 
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 const url = process.env.Database_URL;
 
  
@@ -26,4 +26,4 @@ const billingRoutes = require('./routes/billing');
 app.use('/products', productRoutes);
 app.use('/billing', billingRoutes);
 
-app.listen(port, () => console.log(`Server running on http://localhost:${port}`));
+app.listen(port, () => console.log(`Server running on port ${port}`));
